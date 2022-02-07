@@ -3,6 +3,7 @@ import React from "react";
 const NavList = (props) => {
   return (
     <li
+      onClick={props.onNavigate}
       className="
     px-4
     py-2

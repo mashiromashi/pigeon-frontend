@@ -8,9 +8,9 @@ export const layoutName = {
     lists: [
       {
         label: "Articles",
-        route: "/articles",
+        route: "/dashboard/articles",
       },
-      { label: "Create Article", route: "/articles/create-article" },
+      { label: "Create Article", route: "/dashboard/articles/create-article" },
     ],
   },
   product: {
@@ -20,7 +20,7 @@ export const layoutName = {
         label: "Products",
         route: "/products",
       },
-      { label: "Create Product", route: "/products/create-product" },
+      { label: "Create Product", route: "/dashboard/products/create-product" },
     ],
   },
 };
