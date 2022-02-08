@@ -1,5 +1,6 @@
-import React from "react";
-import logoWhite from "assets/img/logo-white.svg";
+import React from 'react';
+import logoWhite from 'assets/img/logo-white.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -136,9 +137,9 @@ const Footer = () => {
           >
             <p>Copyright © Pigeon Singapore Pte Ltd. All Rights Reserved.</p>
             <div className="space-x-4">
-              <a href="/" className="underline">
-                Privacy Policy
-              </a>
+              <Link to="/privacy-policy">
+                <span className="underline cursor-pointer">Privacy Policy</span>
+              </Link>
               <a href="/" className="underline">
                 Social Media Policy
               </a>

@@ -9,11 +9,13 @@ import {
   Products,
   PublicProducts,
   TipAndHelps,
-} from "PublicLoader";
-import React from "react";
-import { useSelector } from "react-redux";
-import { Navigate, Route, Routes } from "react-router-dom";
-import { storage } from "util/storage";
+  PrivacyPolicy,
+  BasicPolicy,
+} from 'PublicLoader';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { storage } from 'util/storage';
 
 const MainRoute = () => {
   const loginUser = storage.getUserEntity();
@@ -30,6 +32,8 @@ const MainRoute = () => {
           <Route path="/blogs-articles" element={<BlogAndArticles />} />
           <Route path="/tips-helps-guides" element={<TipAndHelps />} />
           <Route path="/products" element={<PublicProducts />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/basic-policy" element={<BasicPolicy />} />
         </React.Fragment>
       ) : (
         <React.Fragment>
@@ -48,7 +52,7 @@ const MainRoute = () => {
       )}
       <Route
         path="*"
-        element={<Navigate to={!checkIsLogin ? "/login" : "/dashboard"} />}
+        element={<Navigate to={!checkIsLogin ? '/login' : '/dashboard'} />}
       />
     </Routes>
   );

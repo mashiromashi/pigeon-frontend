@@ -14,12 +14,12 @@ import {
   productManual,
   registration,
   tips,
-} from "assets/svg/svg";
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import NavList from "./NavList";
-import NavSubMenu from "./NavSubMenu";
-import SubNavBarCard from "./SubNavBarCard";
+} from 'assets/svg/svg';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import NavList from './NavList';
+import NavSubMenu from './NavSubMenu';
+import SubNavBarCard from './SubNavBarCard';
 
 const NavLists = () => {
   const navigate = useNavigate();
@@ -36,9 +36,9 @@ const NavLists = () => {
     mt-10
     lg:mt-0"
     >
-      <NavList title="Home" onNavigate={() => navigate("/")} />
+      <NavList title="Home" onNavigate={() => navigate('/')} />
       {/* Product */}
-      <NavList title="Products" onNavigate={() => navigate("/products")} />
+      <NavList title="Products" onNavigate={() => navigate('/products')} />
       {/* resources */}
       <NavList title="Resources">
         <NavSubMenu subTitle="Resources">
@@ -143,7 +143,7 @@ const NavLists = () => {
             products"
           />
           <SubNavBarCard
-            route="/tips-helps-guides"
+            route="/basic-policy"
             svg={basicPolicy}
             cardTitle="Basic Policy"
             cardContent="Know more about out basic policy on customer service and

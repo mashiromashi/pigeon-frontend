@@ -1,6 +1,6 @@
-import React from "react";
-import tip from "assets/img/card-img1.jpg";
-import blog from "assets/img/card-img2.jpg";
+import React from 'react';
+import tip from 'assets/img/card-img1.jpg';
+import blog from 'assets/img/card-img2.jpg';
 
 const TipAndBlog = () => {
   return (
@@ -17,7 +17,7 @@ const TipAndBlog = () => {
     xl:space-x-12
   "
       >
-        <div className="w-full lg:w-1/2 rounded-xl bg-blue-200 overflow-hidden">
+        <div className="w-full lg:w-1/2 rounded-xl bg-blue-200 overflow-hidden ">
           <div className="relative">
             <img
               src={tip}
@@ -68,7 +68,7 @@ const TipAndBlog = () => {
             </button>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 rounded-xl bg-amber-200 overflow-hidden">
+        <div className="w-full lg:w-1/2 rounded-xl bg-amber-200 overflow-hidden ">
           <div className="relative">
             <img
               src={blog}
