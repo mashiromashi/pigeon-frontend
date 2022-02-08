@@ -1,17 +1,17 @@
-import PageHeader from "components/PageHeader";
-import MainLayout from "dashboard/layout/MainLayout";
-import ContentWrapper from "hoc/ContentWrapper";
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import MuiDataTable from "mui-datatables";
-import { IconButton, Tooltip } from "@mui/material";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
-import DeleteDialog from "components/dialog/DeleteDialog";
+import PageHeader from 'components/PageHeader';
+import MainLayout from 'dashboard/layout/MainLayout';
+import ContentWrapper from 'hoc/ContentWrapper';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import MuiDataTable from 'mui-datatables';
+import { IconButton, Tooltip } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteDialog from 'components/dialog/DeleteDialog';
 
 const Articles = () => {
   const [deleteModal, setDeleteModal] = useState(false);
-  const [updateModal, setUpdateModal] = useState(false);
+  const [, setUpdateModal] = useState(false);
   //delete Modal
   const deletArticleModal = () => {
     setDeleteModal(true);
@@ -35,27 +35,27 @@ const Articles = () => {
           type="Article"
           cancelClose={() => setDeleteModal(false)}
         />,
-        document.getElementById("dialog")
+        document.getElementById('dialog')
       )}
 
       <MainLayout>
         <ContentWrapper>
           <PageHeader title="Articles" content="View and Manage Article Here" />
-          <div style={{ marginLeft: "1em", marginRight: "1em" }}>
+          <div style={{ marginLeft: '1em', marginRight: '1em' }}>
             <MuiDataTable
               title="Articles"
               columns={[
                 {
-                  label: "Image",
-                  name: "image",
+                  label: 'Image',
+                  name: 'image',
                   options: { filter: false },
                 },
-                { label: "Title", name: "title" },
-                { label: "Content", name: "content" },
-                { label: "Created", name: "createdAt" },
+                { label: 'Title', name: 'title' },
+                { label: 'Content', name: 'content' },
+                { label: 'Created', name: 'createdAt' },
                 {
-                  label: "Action",
-                  name: "",
+                  label: 'Action',
+                  name: '',
                   options: {
                     filter: false,
                     sort: false,
@@ -70,7 +70,7 @@ const Articles = () => {
                               aria-label="edit article"
                               component="span"
                             >
-                              <EditIcon style={{ color: "blue" }} />
+                              <EditIcon style={{ color: 'blue' }} />
                             </IconButton>
                           </Tooltip>
                           <Tooltip title="Delete Article">
@@ -80,7 +80,7 @@ const Articles = () => {
                               aria-label="delete article"
                               component="span"
                             >
-                              <DeleteIcon style={{ color: "red" }} />
+                              <DeleteIcon style={{ color: 'red' }} />
                             </IconButton>
                           </Tooltip>
                         </div>
@@ -91,16 +91,16 @@ const Articles = () => {
               ]}
               data={[
                 {
-                  image: "Image",
-                  title: "Title",
-                  content: "content",
-                  createdAt: "created",
+                  image: 'Image',
+                  title: 'Title',
+                  content: 'content',
+                  createdAt: 'created',
                 },
               ]}
               options={{
                 serverSide: false,
-                responsive: "standard",
-                selectableRows: "none",
+                responsive: 'standard',
+                selectableRows: 'none',
                 viewColumns: false,
                 download: false,
                 print: false,
